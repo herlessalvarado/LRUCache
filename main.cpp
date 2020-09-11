@@ -5,11 +5,11 @@ int main(){
     lru.insertKeyValuePair("b", 2);
     lru.insertKeyValuePair("a", 1);
     lru.insertKeyValuePair("c", 3);
-    lru.getMostRecentKey();
-    lru.getValueFromKey("a");
-    lru.getMostRecentKey();
+    std::cout << lru.getMostRecentKey() << std::endl;
+    std::cout << *lru.getValueFromKey("a") << std::endl;
+    std::cout << lru.getMostRecentKey() << std::endl;
     lru.insertKeyValuePair("d", 4);
-    lru.getValueFromKey("b");
+    std::cout << *lru.getValueFromKey("b") << std::endl;
     lru.insertKeyValuePair("a", 5);
-    lru.getValueFromKey("a");
+    std::cout << *lru.getValueFromKey("a") << std::endl;
 }
